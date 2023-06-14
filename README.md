@@ -4,6 +4,12 @@ VSCode 代码片段插件，整合所有实用工具的代码片段。
 
 
 
+## How to Install
+
+- 插件市场搜索：`jacky-snippets`
+
+
+
 ## Usage
 
 打开 `VSCode` 编辑器，选择语言为 `Javascript` 。

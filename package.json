@@ -3,12 +3,14 @@
   "displayName": "jacky-snippets",
   "publisher": "w-plus-jacky",
   "description": "",
+  "repository": "https://github.com/wangjs-jacky/jacky-snippets",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.79.0"
   },
   "scripts": {
-    "build": "node ./scripts/mergeJson.js"
+    "build:json": "node ./scripts/mergeJson.js",
+    "build:package": "vsce package"
   },
   "categories": [
     "Snippets"
