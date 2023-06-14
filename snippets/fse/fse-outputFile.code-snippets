@@ -1,0 +1,43 @@
+{
+  "[fs-extra][outputFile][async][callback 模式] 相当于 fs.writeFile": {
+    "prefix": "fse-outputFile",
+    "body": [
+      "fse.outputFile(file, 'hello!', err => {",
+      "  console.log(err) // => null",
+      "  fse.readFile(file, 'utf8', (err, data) => {",
+      "    if (err) return console.error(err)",
+      "    console.log(data) // => hello!",
+      "  })",
+      "})"
+    ],
+    "description": "[fs-extra][outputFile][async][callback 模式] 相当于 fs.writeFile"
+  },
+  "[fs-extra][outputFile][async][[promise 模式] 相当于 fs.writeFile": {
+    "prefix": "fse-outputFile",
+    "body": [
+      "fse.outputFile(file, 'hello!')",
+      ".then(() => fse.readFile(file, 'utf8'))",
+      ".then(data => {",
+      "  console.log(data) // => hello!",
+      "})",
+      ".catch(err => {",
+      "  console.error(err)",
+      "})",
+      ""
+    ],
+    "description": "[fs-extra][outputFile][async][[promise 模式] 相当于 fs.writeFile"
+  },
+  "[fs-extra][outputFile][async][async 模式] 相当于 fs.writeFile": {
+    "prefix": "fse-outputFile",
+    "body": [
+      "try {",
+      "  await fse.outputFile(file, 'hello!')",
+      "  const data = await fse.readFile(file, 'utf8')",
+      "  console.log(data) // => hello!",
+      "} catch (err) {",
+      "  console.error(err)",
+      "}"
+    ],
+    "description": "[fs-extra][outputFile][async][async 模式] 相当于 fs.writeFile"
+  }
+}

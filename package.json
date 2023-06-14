@@ -1,0 +1,28 @@
+{
+  "name": "jacky-snippets",
+  "displayName": "jacky-snippets",
+  "publisher": "w-plus-jacky",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.79.0"
+  },
+  "scripts": {
+    "build": "node ./scripts/mergeJson.js"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./dist/fse.code-snippets"
+      }
+    ]
+  },
+  "devDependencies": {
+    "fs-extra": "^11.1.1",
+    "glob": "^10.2.7"
+  }
+}

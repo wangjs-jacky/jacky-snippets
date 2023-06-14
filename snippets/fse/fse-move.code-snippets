@@ -1,0 +1,55 @@
+{
+  "[fs-extra][move][async][callback 模式]": {
+    "prefix": "fse-move",
+    "body": [
+      "const src = '/tmp/file.txt'",
+      "const dest = '/tmp/this/path/does/not/exist/file.txt'",
+      "",
+      "fse.move(src, dest, err => {",
+      "  if (err) return console.error(err)",
+      "  console.log('success!')",
+      "})"
+    ],
+    "description": "[fs-extra][move][async][callback 模式]"
+  },
+  "[fs-extra][move][async][promise 模式]": {
+    "prefix": "fse-move",
+    "body": [
+      "const src = '/tmp/file.txt'",
+      "const dest = '/tmp/this/path/does/not/exist/file.txt'",
+      "",
+      "fse.move(src, dest)",
+      ".then(() => {",
+      "  console.log('success!')",
+      "})",
+      ".catch(err => {",
+      "  console.error(err)",
+      "})"
+    ],
+    "description": "[fs-extra][move][async][promise 模式]"
+  },
+  "[fs-extra][move][async][async 模式]": {
+    "prefix": "fse-move",
+    "body": [
+      "const src = '/tmp/file.txt'",
+      "const dest = '/tmp/this/path/does/not/exist/file.txt'",
+      "try {",
+      "  await fse.move(src, dest)",
+      "  console.log('success!')",
+      "} catch (err) {",
+      "  console.error(err)",
+      "}"
+    ],
+    "description": "[fs-extra][move][async][async 模式]"
+  },
+  "[fs-extra][move][async][支持 overwrite]": {
+    "prefix": "fse-move",
+    "body": [
+      "fse.move('/tmp/somedir', '/tmp/may/already/exist/somedir', { overwrite: true }, err => {",
+      "  if (err) return console.error(err)",
+      "  console.log('success!')",
+      "})"
+    ],
+    "description": "[fs-extra][move][async][支持 overwrite]"
+  }
+}

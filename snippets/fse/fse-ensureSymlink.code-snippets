@@ -1,0 +1,40 @@
+{
+  "[fs-extra][ensureSymlink][async][callback 模式]": {
+    "prefix": "fse-ensureSymlink",
+    "body": [
+      "const srcPath = '/tmp/file.txt'",
+      "const destPath = '/tmp/this/path/does/not/exist/file.txt'",
+      "",
+      "fs.ensureSymlink(srcPath, destPath, err => {",
+      "  console.log(err) // => null",
+      "  // symlink has now been created, including the directory it is to be placed in",
+      "})"
+    ],
+    "description": "[fs-extra][ensureSymlink][async][callback 模式]"
+  },
+  "[fs-extra][ensureSymlink][async][promise 模式]": {
+    "prefix": "fse-ensureSymlink",
+    "body": [
+      "fs.ensureSymlink(srcPath, destPath)",
+      ".then(() => {",
+      "  console.log('success!')",
+      "})",
+      ".catch(err => {",
+      "  console.error(err)",
+      "})"
+    ],
+    "description": "[fs-extra][ensureSymlink][async][promise 模式]"
+  },
+  "[fs-extra][ensureSymlink][async][async 模式]": {
+    "prefix": "fse-ensureSymlink",
+    "body": [
+      "try {",
+      "  await fs.ensureSymlink(src, dest)",
+      "  console.log('success!')",
+      "} catch (err) {",
+      "  console.error(err)",
+      "}"
+    ],
+    "description": "[fs-extra][ensureSymlink][async][async 模式]"
+  }
+}

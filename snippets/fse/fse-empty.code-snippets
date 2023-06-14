@@ -1,0 +1,37 @@
+{
+  "[fs-extra][emptyDir][async][回调模式]": {
+    "prefix": "fse-emptyDir",
+    "body": [
+      "fse.emptyDir('/tmp/some/dir', err => {",
+      "  if (err) return console.error(err)",
+      "  console.log('success!')",
+      "})"
+    ],
+    "description": "[fs-extra][emptyDir][async][回调模式]"
+  },
+  "[fs-extra][emptyDir][async][promise模式]": {
+    "prefix": "fse-emptyDir",
+    "body": [
+      "fse.emptyDir('/tmp/some/dir')",
+      ".then(() => {",
+      "  console.log('success!')",
+      "})",
+      ".catch(err => {",
+      "  console.error(err)",
+      "})"
+    ],
+    "description": "[fs-extra][emptyDir][async][promise模式]"
+  },
+  "[fs-extra][emptyDir][async][async模式]": {
+    "prefix": "fse-emptyDir",
+    "body": [
+      "try {",
+      "  await fse.emptyDir('/tmp/some/dir')",
+      "  console.log('success!')",
+      "} catch (err) {",
+      "  console.error(err)",
+      "}"
+    ],
+    "description": "[fs-extra][emptyDir][async][promise模式]"
+  }
+}

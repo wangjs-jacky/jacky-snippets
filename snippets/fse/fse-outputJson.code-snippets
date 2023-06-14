@@ -1,0 +1,42 @@
+{
+  "[fs-extra][outputJson][async][callback 模式] 相当于 fs.writeJson": {
+    "prefix": "fse-outputJson",
+    "body": [
+      "fse.outputJson(file, {name: 'JP'}, err => {",
+      "  console.log(err) // => null",
+      "  fse.readJson(file, (err, data) => {",
+      "    if (err) return console.error(err)",
+      "    console.log(data.name) // => JP",
+      "  })",
+      "})"
+    ],
+    "description": "[fs-extra][outputJson][async][callback 模式] 相当于 fs.writeJson"
+  },
+  "[fs-extra][outputJson][async][promise 模式] 相当于 fs.writeJson": {
+    "prefix": "fse-outputJson",
+    "body": [
+      "fse.outputJson(file, {name: 'JP'})",
+      ".then(() => fse.readJson(file))",
+      ".then(data => {",
+      "  console.log(data.name) // => JP",
+      "})",
+      ".catch(err => {",
+      "  console.error(err)",
+      "})"
+    ],
+    "description": "[fs-extra][outputJson][async][promise 模式] 相当于 fs.writeJson"
+  },
+  "[fs-extra][outputJson][async][async 模式] 相当于 fs.writeJson": {
+    "prefix": "fse-outputJson",
+    "body": [
+      "try {",
+      "  await fse.outputJson(f, {name: 'JP'})",
+      "  const data = await fse.readJson(f)",
+      "  console.log(data.name) // => JP",
+      "} catch (err) {",
+      "  console.error(err)",
+      "}"
+    ],
+    "description": "[fs-extra][outputJson][async][async 模式] 相当于 fs.writeJson"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "[fs-extra][cjs]导入": {
+    "prefix": [
+      "fse-cjs",
+      "fse-require"
+    ],
+    "body": [
+      "/* ",
+      "对于 commjs 规范，fs中的所有方法都附加到fs-extra",
+      "如果没有传递回调，所有 fs 方法都会返回 promise",
+      "*/",
+      "const fse = require('fs-extra')"
+    ],
+    "description": "[fs-extra][cjs]导入"
+  },
+  "[fs-extra][esm][promise]": {
+    "prefix": [
+      "fse-esm",
+      "fse-import"
+    ],
+    "body": [
+      "/* ",
+      "fs-extra/esm，同时支持默认导出和命名导出",
+      "注意:fs 方法不包括在 fs-extra/esm 中,仍然需要分别导入 fs 或 fs/promise",
+      "*/",
+      "import { readFileSync } from 'fs'",
+      "import { readFile } from 'fs/promises'",
+      "import { outputFile, outputFileSync } from 'fs-extra/esm'"
+    ],
+    "description": "[fs-extra][esm][promise]"
+  },
+  "[fs-extra][example]提供简单示例": {
+    "prefix": "fse-example",
+    "body": [
+      "const fs = require('fs-extra')",
+      "// Async with promises:",
+      "fs.copy('/tmp/myfile', '/tmp/mynewfile')",
+      "  .then(() => console.log('success!'))",
+      "  .catch(err => console.error(err))",
+      "",
+      "// Async with callbacks:",
+      "fs.copy('/tmp/myfile', '/tmp/mynewfile', err => {",
+      "  if (err) return console.error(err)",
+      "  console.log('success!')",
+      "})"
+    ],
+    "description": "[fs-extra][example]提供简单示例"
+  },
+  "[fs-extra][example]提供简单示例2": {
+    "prefix": "fse-example",
+    "body": [
+      "const fs = require('fs-extra')",
+      "// Sync:",
+      "try {",
+      "  fs.copySync('/tmp/myfile', '/tmp/mynewfile')",
+      "  console.log('success!')",
+      "} catch (err) {",
+      "  console.error(err)",
+      "}",
+      "",
+      "// Async/Await:",
+      "async function copyFiles () {",
+      "  try {",
+      "    await fs.copy('/tmp/myfile', '/tmp/mynewfile')",
+      "    console.log('success!')",
+      "  } catch (err) {",
+      "    console.error(err)",
+      "  }",
+      "}"
+    ],
+    "description": "[fs-extra][example]提供简单示例"
+  }
+}

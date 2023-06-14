@@ -1,0 +1,38 @@
+{
+  "[fs-extra][readJson][async][callback 模式] ": {
+    "prefix": "fse-remove",
+    "body": [
+      "fs.remove('/tmp/myfile', err => {",
+      "  if (err) return console.error(err)",
+      "  console.log('success!')",
+      "})",
+      ""
+    ],
+    "description": "[fs-extra][readJson][async][callback 模式] "
+  },
+  "[fs-extra][readJson][async][promise 模式] ": {
+    "prefix": "fse-remove",
+    "body": [
+      "fse.remove('/tmp/myfile')",
+      ".then(() => {",
+      "  console.log('success!')",
+      "})",
+      ".catch(err => {",
+      "  console.error(err)",
+      "})"
+    ],
+    "description": "[fs-extra][readJson][async][promise 模式] "
+  },
+  "[fs-extra][readJson][async][async 模式] ": {
+    "prefix": "fse-remove",
+    "body": [
+      "try {",
+      "  await fs.remove('/tmp/myfile')",
+      "  console.log('success!')",
+      "} catch (err) {",
+      "  console.error(err)",
+      "}"
+    ],
+    "description": "[fs-extra][readJson][async][async 模式] "
+  }
+}

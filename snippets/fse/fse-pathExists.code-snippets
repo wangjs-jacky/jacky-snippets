@@ -1,0 +1,27 @@
+{
+  "[fs-extra][outputJson][async][callback 模式] 相比于 fs.exists 多提供状态签名": {
+    "prefix": "fse.pathExists",
+    "body": [
+      "fse.pathExists(file, (err, exists) => {",
+      "  console.log(err) // => null",
+      "  console.log(exists) // => false",
+      "})"
+    ],
+    "description": "[fs-extra][outputJson][async][callback 模式] 相比于 fs.exists 多提供状态签名"
+  },
+  "[fs-extra][outputJson][async][promise 模式] 相比于 fs.exists 多提供状态签名": {
+    "prefix": "fse.pathExists",
+    "body": [
+      "fse.pathExists(file)",
+      "  .then(exists => console.log(exists)) // => false"
+    ],
+    "description": "[fs-extra][outputJson][async][promise 模式] 相比于 fs.exists 多提供状态签名"
+  },
+  "[fs-extra][outputJson][async][async 模式] 相比于 fs.exists 多提供状态签名": {
+    "prefix": "fse.pathExists",
+    "body": [
+      "const exists = await fse.pathExists(f)"
+    ],
+    "description": "[fs-extra][outputJson][async][async 模式] 相比于 fs.exists 多提供状态签名"
+  }
+}

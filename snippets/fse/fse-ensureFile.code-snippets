@@ -1,0 +1,38 @@
+{
+  "[fs-extra][ensureFile][async][callback模式]": {
+    "prefix": "fse-ensureFile",
+    "body": [
+      "const file = '/tmp/this/path/does/not/exist/file.txt'",
+      "fse.ensureFile(file, err => {",
+      "  console.log(err)",
+      "})",
+      ""
+    ],
+    "description": "[fs-extra][ensureFile][async][callback模式]"
+  },
+  "[fs-extra][ensureFile][async][promise模式]": {
+    "prefix": "fse-ensureFile",
+    "body": [
+      "fse.ensureFile(file)",
+      ".then(() => {",
+      "  console.log('success!')",
+      "})",
+      ".catch(err => {",
+      "  console.error(err)",
+      "})"
+    ],
+    "description": "[fs-extra][ensureFile][async][promise模式]"
+  },
+  "[fs-extra][ensureFile][async][async模式]": {
+    "prefix": "fse-ensureFile",
+    "body": [
+      "try {",
+      "  await fs.ensureFile(f)",
+      "  console.log('success!')",
+      "} catch (err) {",
+      "  console.error(err)",
+      "}"
+    ],
+    "description": "[fs-extra][ensureFile][async][async模式]"
+  }
+}

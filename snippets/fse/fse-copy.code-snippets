@@ -1,0 +1,55 @@
+{
+	"[fs-extra][copy][async][callback 拷贝文件]": {
+		"prefix": "fse-copy",
+		"body": [
+			"const fse = require('fs-extra');",
+			"",
+			"fse.copy('/tmp/myfile', '/tmp/mynewfile', err => {",
+			"  if (err) return console.error(err)",
+			"  console.log('success!')",
+			"})"
+		],
+		"description": "[fs-extra][copy][callback 形式]"
+	},
+	"[fs-extra][copy][async][callback 拷贝文件夹]": {
+		"prefix": "fse-copy",
+		"body": [
+			"const fse = require('fs-extra');",
+			"",
+			"fs.copy('/tmp/mydir', '/tmp/mynewdir', err => {",
+			"  if (err) return console.error(err)",
+			"  console.log('success!')",
+			"}) "
+		],
+		"description": "[fs-extra][copy][拷贝文件夹]"
+	},
+	"[fs-extra][copy][async][拷贝文件-async模式]": {
+		"prefix": "fse-copy",
+		"body": [
+			"async function example () {",
+			"  try {",
+			"    await fse.copy('/tmp/myfile', '/tmp/mynewfile')",
+			"    console.log('success!')",
+			"  } catch (err) {",
+			"    console.error(err)",
+			"  }",
+			"}"
+		],
+		"description": "[fs-extra][copy][拷贝文件-async模式]"
+	},
+	"[fs-extra][copy][async][支持过滤模式]": {
+		"prefix": "fse-copy",
+		"body": [
+			"const filterFunc = (src, dest) => {",
+			"  // your logic here",
+			"  // it will be copied if return true",
+			"}",
+			"",
+			"fs.copy('/tmp/mydir', '/tmp/mynewdir', { filter: filterFunc }, err => {",
+			"  if (err) return console.error(err)",
+			"  console.log('success!')",
+			"})"
+		],
+		"description": "[fs-extra][copy][支持过滤模式]"
+	}
+}

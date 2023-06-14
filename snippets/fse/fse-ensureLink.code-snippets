@@ -1,0 +1,45 @@
+{
+  "[fs-extra][ensureLink][async][callback 模式]": {
+    "prefix": "fse-ensureLink",
+    "body": [
+      "const srcPath = '/tmp/file.txt'",
+      "const destPath = '/tmp/this/path/does/not/exist/file.txt'",
+      "",
+      "fse.ensureLink(srcPath, destPath, err => {",
+      "  console.log(err) // => null",
+      "})"
+    ],
+    "description": "[fs-extra][ensureLink][async][callback 模式]"
+  },
+  "[fs-extra][ensureLink][async][promise 模式]": {
+    "prefix": "fse-ensureLink",
+    "body": [
+      "const srcPath = '/tmp/file.txt'",
+      "const destPath = '/tmp/this/path/does/not/exist/file.txt'",
+      "",
+      "fs.ensureLink(srcPath, destPath)",
+      ".then(() => {",
+      "  console.log('success!')",
+      "})",
+      ".catch(err => {",
+      "  console.error(err)",
+      "})"
+    ],
+    "description": "[fs-extra][ensureLink][async][promise 模式]"
+  },
+  "[fs-extra][ensureLink][async][async 模式]": {
+    "prefix": "fse-ensureLink",
+    "body": [
+      "const srcPath = '/tmp/file.txt'",
+      "const destPath = '/tmp/this/path/does/not/exist/file.txt'",
+      "",
+      "try {",
+      "  await fs.ensureLink(src, dest)",
+      "  console.log('success!')",
+      "} catch (err) {",
+      "  console.error(err)",
+      "}"
+    ],
+    "description": "[fs-extra][ensureLink][async][async 模式]"
+  }
+}

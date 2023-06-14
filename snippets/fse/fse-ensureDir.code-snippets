@@ -1,0 +1,77 @@
+{
+  "[fs-extra][ensureDir][async][callback模式]": {
+    "prefix": [
+      "fse-ensureDir",
+      "fse-mkdirp",
+      "fse-mkdirs"
+    ],
+    "body": [
+      "/* ",
+      "在下述代码中，desiredMode 的作用是指定创建目录时所需的模式权限。具体来说，它指定了该目录所需的文件系统权限（即读、写和执行权限），在这里使用的是0o2775的八进制形式。如：",
+      "0o777：所有用户都具有读、写和执行权限。",
+      "0o755：所有用户都具有读和执行权限，但只有文件的所有者才能进行写操作。",
+      "0o644：所有用户都具有读权限，但只有文件的所有者才能进行写操作。",
+      "*/",
+      "const dir = '/tmp/this/path/does/not/exist'",
+      "const desiredMode = 0o2775 /* mode integer */",
+      "",
+      "fse.ensureDir(dir, desiredMode, err => {",
+      "  console.log(err) // => null",
+      "})"
+    ],
+    "description": "[fs-extra][ensureDir][async][callback模式]"
+  },
+  "[fs-extra][ensureDir][async][promise模式]": {
+    "prefix": [
+      "fse-ensureDir",
+      "fse-mkdirp",
+      "fse-mkdirs"
+    ],
+    "body": [
+      "fse.ensureDir(dir)",
+      ".then(() => {",
+      "  console.log('success!')",
+      "})",
+      ".catch(err => {",
+      "  console.error(err)",
+      "})"
+    ],
+    "description": "[fs-extra][ensureDir][async][promise模式]"
+  },
+  "[fs-extra][ensureDir][async][promise模式并支持 mode 整数]": {
+    "prefix": [
+      "fse-ensureDir",
+      "fse-mkdirp",
+      "fse-mkdirs"
+    ],
+    "body": [
+      "fs.ensureDir(dir, desiredMode)",
+      ".then(() => {",
+      "  console.log('success!')",
+      "})",
+      ".catch(err => {",
+      "  console.error(err)",
+      "})"
+    ],
+    "description": "[fs-extra][ensureDir][async][promise模式并支持 mode 整数]"
+  },
+  "[fs-extra][ensureDir][async][async 模式并支持 mode 整数]": {
+    "prefix": [
+      "fse-ensureDir",
+      "fse-mkdirp",
+      "fse-mkdirs"
+    ],
+    "body": [
+      "const options = {",
+      "  mode: 0o2775",
+      "}",
+      "try {",
+      "  await fs.ensureDir(directory, options)",
+      "  console.log('success!')",
+      "} catch (err) {",
+      "  console.error(err)",
+      "}"
+    ],
+    "description": "[fs-extra][ensureDir][async][promise模式并支持 mode 整数]"
+  }
+}
