@@ -20,6 +20,18 @@
       {
         "language": "javascript",
         "path": "./dist/fse.code-snippets"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./dist/fse.code-snippets"
+      },
+      {
+        "language": "typescript",
+        "path": "./dist/fse.code-snippets"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./dist/fse.code-snippets"
       }
     ]
   },
